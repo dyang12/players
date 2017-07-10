@@ -1,0 +1,4 @@
+development: &defaults
+  base_url: 'http://api.cbssports.com/'
+  version: '3.0'
+  response_type: 'JSON'

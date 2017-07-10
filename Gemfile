@@ -14,6 +14,8 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 
 gem 'faraday'
+gem 'faraday_middleware'
+
 gem 'active_model_serializers', '~> 0.10.0'
 
 # Use Capistrano for deployment

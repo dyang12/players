@@ -30,4 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  services:
+    cbs_api_service:
+      errors:
+        unexpected_response: 'Unexpected CBS API response body returned'
