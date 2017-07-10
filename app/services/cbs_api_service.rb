@@ -11,7 +11,7 @@ class CbsApiService
     response = connection.get do |req|
       req.url '/fantasy/players/list'
       req.params = base_params
-      req.params['SPORT'] = sport
+      req.params['SPORT'] = sport.downcase
     end
 
     if response.success?
@@ -24,8 +24,7 @@ class CbsApiService
   private
 
   def connection
-    @connection ||= Faraday.new(:url => base_url) do |c|
-      c.response :json, :content_type => /\bjson$/
+    @connection ||= Faraday.new(url: base_url) do |c|
       c.adapter Faraday.default_adapter
     end
   end
